@@ -1,31 +1,59 @@
-// const heading = React.createElement(
-//     "h1",
-//     {id: "heading", xyz: "abc"},
-//     "Hello React for Application"
-// );
-// console.log(heading);
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const parent = React.createElement(
-    "div",{id:"parent"},
-    [
-        React.createElement("div",{id:"child1"},
-            [
-                React.createElement("h1",{},"This is H1 Tag"),
-                React.createElement("h2",{},"This is H2 Tag")
-            ]
-        ),
-        React.createElement("div",{id:"child2"},
-            [
-                React.createElement("h1",{},"This is H1 Tag"),
-                React.createElement("h2",{},"This is H2 Tag")
-            ]
-        )
-    ]
-)
 
-console.log(parent);
+const Header = () => (
+    <div className="main-header">
+        <div className="logo">
+            <img src="https://cdn.vectorstock.com/i/500p/22/07/burger-icon-isolated-flat-cartoon-sandwich-vector-15262207.jpg" />
+        </div>
+        <div className="menu">
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Cart</li>
+            </ul>
+        </div>
+    </div>
+);
+
+const cartStyle = {
+    "border":"1px dotted green",
+};
+
+
+const Card = (props) => {
+    console.log(props)
+    return (
+        <div className="card" style={cartStyle}>
+            <img src="https://cdn.vectorstock.com/i/500p/22/07/burger-icon-isolated-flat-cartoon-sandwich-vector-15262207.jpg"/>
+            <p>North, South Indian, Chinese, Pizza</p>
+            <p>On site / Taking Order</p>
+        </div>
+    )
+};
+
+const Body = () => {
+    return (
+        <div className="main-body">
+            <div className="search-box">
+                <input type="text" name="search" placeholder="Search here..."/>
+            </div>
+            <Card resName="Houesfull" cusine="cocktail, Snacks, Pizza" />
+            <Card resName="welcome2" cusine="continental, Chinese, Seafood" />
+        </div>
+    )
+};
+
+// React Component Composition //
+const Reactcomponent = () => (
+    <div id="container">
+        <Header/>
+        <h2 className="heading">This is Order Platform</h2>
+        <Body/>
+    </div>
+);
+console.log(Reactcomponent);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// root.render(heading);
-root.render(parent);
+root.render(<Reactcomponent />);

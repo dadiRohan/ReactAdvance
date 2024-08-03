@@ -1,3 +1,21 @@
 #heading{
     color: blue;
 }
+
+.main-header{
+    display:flex;
+}
+
+img{
+    max-width : 60%;
+    height: auto;
+}
+
+.menu > ul{
+    display:flex;
+}
+.menu > ul > li{
+    display:flex;
+    padding : 120px;
+}
+

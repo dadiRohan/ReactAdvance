@@ -1,0 +1,34 @@
+{
+  "name": "reactadvance",
+  "version": "1.0.0",
+  "description": "This react App for Easy to Advance",
+  "scripts": {
+    "start" : "parcel index.html",
+    "build" : "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dadiRohan/ReactAdvance.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Rohan Sable",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dadiRohan/ReactAdvance/issues"
+  },
+  "homepage": "https://github.com/dadiRohan/ReactAdvance#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}
