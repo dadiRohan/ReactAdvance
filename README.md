@@ -5,7 +5,8 @@
 (1) npm init
  - it give details for json
    
-(2) npm install -D parcel
+(2)  npm install -D parcel
+     npm install -D parcel-bundler 
  - parcel can be used to hold all packages for project
    
 (3) npx parcel index.html

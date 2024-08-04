@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "This react App for Easy to Advance",
   "scripts": {
-    "start" : "parcel index.html",
-    "build" : "parcel build index.html",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -22,6 +22,7 @@
   "homepage": "https://github.com/dadiRohan/ReactAdvance#readme",
   "devDependencies": {
     "parcel": "^2.12.0",
+    "parcel-bundler": "^1.12.5",
     "process": "^0.11.10"
   },
   "dependencies": {
