@@ -16,3 +16,14 @@
     padding : 20px;
 }
 
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer{
+    margin: 20px;
+    width: 200px;
+    height: 400px;
+    background-color: gray;
+}

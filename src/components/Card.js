@@ -11,7 +11,7 @@ const Card = (props) => {
     console.log(props);
     const {restData} = props;
     const {name, cusine, rating, photo} = restData?.data;
-    console.log(restData);
+    // console.log(restData);
     return (
         <div className="card" style={cartStyle}>
             <img src={photo} style={{"width" : "100%","height" : "40%", "alignSelf" : "center","display":"block"}}/>

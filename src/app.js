@@ -13,7 +13,7 @@ const Reactcomponent = () => (
         <Body/>
     </div>
 );
-console.log(Reactcomponent);
+// console.log(Reactcomponent);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<Reactcomponent />);
