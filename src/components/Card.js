@@ -1,10 +1,7 @@
 import React from "react";
 
-const cartStyle = {
-    "border":"1px dotted green",
-    "width" : "10%",
-    "margin" : "0 2px",
-    "padding" : "2px"
+const cardStyle = {
+    "backgroundColor": "rgb(23, 168, 100)",
 };
 
 const Card = (props) => {
@@ -13,7 +10,7 @@ const Card = (props) => {
     const {name, cusine, rating, photo} = restData?.data;
     // console.log(restData);
     return (
-        <div className="card" style={cartStyle}>
+        <div className="card" style={cardStyle}>
             <img src={photo} style={{"width" : "100%","height" : "40%", "alignSelf" : "center","display":"block"}}/>
             <h4>{name}</h4>
             <p><b>Cusine:</b> {cusine}</p>

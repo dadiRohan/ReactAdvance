@@ -1,15 +1,22 @@
 import React from "react";
 
 const Shimmer = () => {
-
-    <div class="shimmer-container">
-        <div class="shimmer"></div>
-        <div class="shimmer"></div>
-        <div class="shimmer"></div>
-        <div class="shimmer"></div>
-        <div class="shimmer"></div>
-        <div class="shimmer"></div>
-    </div>
+    return (
+        <div className="shimmer-container">
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+            <div className="shimmer"></div>
+        </div>
+    );
 };
 
 export default Shimmer;
