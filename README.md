@@ -1,6 +1,6 @@
 # Basic to Advance React Learning
 
-#URL : https://splendorous-bunny-536637.netlify.app/
+#URL : https://splendorous-bunny-536637.netlify.app/ OR https://66bc61a4058e1f000822585b--splendorous-bunny-536637.netlify.app/
 
 # Important Commands :
 (1) npm init
@@ -41,5 +41,18 @@
 - When Component inside component is called as Component Composition.
 - JSX always Sanitize variable call API for prevent XSS attacks.
 
+# React Hooks :
+At React for doing operations and callback apis used hook these are inbuild react components which used for do operations smootly.
 
+(1) useState() : use state hook using for initial state and its updated state. when usestate function at initially set at const variable array used 2 fields. Its syntax is 
+
+`const [userData, setUserData] = useState([]);`
+
+(2) useEffect() : use effect hook using for lifecycle of api because when calling api then async and await has to call and sometime updated data api has to call so useEffect() used. its second parameter is mostly empty array but we should used for update data in lifecycle of API. Its syntac is
+
+`useEffect(
+ () => {
+  setUserData(data?.list)
+ }
+,[])`
    
