@@ -9,14 +9,14 @@ import {NormalState,UseStateVar,NormalEffect,Dashed} from './components/Hook';
 const Reactcomponent = () => (
     <div id="container">
          <Header/>
-        <h2 className="heading">This is Order Platform</h2>
+        {/* <h2 className="heading">This is Order Platform</h2> */}
         <Body/> 
         
         {/* <NormalState/>
         <UseStateVar/>
         <NormalEffect/>     */}
 
-        {/* <Dashed/> */}
+       <Dashed/>
     </div>
 );
 // console.log(Reactcomponent);
