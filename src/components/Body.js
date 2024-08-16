@@ -31,7 +31,6 @@ const Body = () => {
         const timer = setTimeout(()=>{
             fetchData();    
 
-            console.log('SetTimeout Timer');
         },1000);
         return () => clearTimeout(timer);
 
@@ -45,13 +44,6 @@ const Body = () => {
     return (
         <div className="main-body">
             
-            {/* <button className="filter-btn" onClick={()=>{
-                const filterRestList = restList.filter(
-                    (res) => res?.restaurantId  === 0
-                );
-                setList(filterRestList);
-            }}>Top Active Restaurants</button> */}
-
             <div className="search-box">
                 <input type="text" name="search" placeholder="Search here" value={searchText} onChange={
                     (e) => {
@@ -80,7 +72,6 @@ const Body = () => {
                 {
                     
                     filterSearch.map((restarant) => (
-                        // console.log(restarant);
                         <Card key={restarant.cloudinaryId} restData = {restarant}/>
                     ))
             

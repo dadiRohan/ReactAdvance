@@ -5,11 +5,9 @@ const cardStyle = {
 };
 
 const Card = (props) => {
-    // console.log(props.restData.restaurantId);
     const {restData} = props;
     const {text, category, type, photo} = restData;
 
-    console.log({restData});
     return (
         <div className="card" style={cardStyle}>
             {/* <img src={photo} style={{"width" : "100%","height" : "40%", "alignSelf" : "center","display":"block"}}/> */}
