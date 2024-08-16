@@ -6,22 +6,21 @@ import Shimmer from "./Shimmer";
 const Body = () => {
 
     const [restList,setList] = useState(0); 
+    const [filterSearch,setFilterSearch] = useState([]);
+
+    const [searchText,setSearchText] = useState("");
   
     const fetchData = async () => {
         try {
             const data = await fetch("https://www.swiggy.com/dapi/restaurants/search/suggest?lat=19.120842&lng=72.9250169&str=Thane");
-
             const json = await data.json();
+            const masterJson = json?.data?.suggestions;
 
-            setList(json?.data?.suggestions)
-            
+            setList(masterJson)
+            setFilterSearch(masterJson)
         } catch (error) {
-            // console.log(error)
-            const json = RestAdvanceList;
-            console.log('Data:');
-            console.log(json);
-            
-            setList(json)
+            setList(RestAdvanceList)
+            setFilterSearch(RestAdvanceList)
         }    
     };
 
@@ -30,12 +29,10 @@ const Body = () => {
     useEffect(() => {
         
         const timer = setTimeout(()=>{
-            // setList(RestAdvanceList);
-
             fetchData();    
 
             console.log('SetTimeout Timer');
-        },3000);
+        },1000);
         return () => clearTimeout(timer);
 
     },[]);  
@@ -48,24 +45,41 @@ const Body = () => {
     return (
         <div className="main-body">
             
-            <button className="filter-btn" onClick={()=>{
-                
+            {/* <button className="filter-btn" onClick={()=>{
                 const filterRestList = restList.filter(
-                    (res) => res?.data?.rate > 4
+                    (res) => res?.restaurantId  === 0
                 );
                 setList(filterRestList);
-                
-            }}>Top Rated Restaurants</button>
+            }}>Top Active Restaurants</button> */}
 
             <div className="search-box">
-                <input type="text" name="search" placeholder="Search here..."/>
+                <input type="text" name="search" placeholder="Search here" value={searchText} onChange={
+                    (e) => {
+                        setSearchText(e.target.value)
+                    }
+                }/>
+                <button onClick={
+                    () => {
+                        const filterSearchFinal = filterSearch.filter((listData) => ( 
+                            searchText === "" ? 
+                            fetchData() : 
+                            listData?.text.toLowerCase().includes(searchText.toLowerCase()) 
+                        ))
+                        
+                        setFilterSearch(filterSearchFinal);
+                    }
+                }>Search</button>
+                <button onClick={() => {
+                    setSearchText("");
+                    fetchData();   
+                }}>Clear</button>
             </div>
             
             <div className="card-container" style={{"display" : "flex"}}>
             
                 {
                     
-                    restList.map((restarant) => (
+                    filterSearch.map((restarant) => (
                         // console.log(restarant);
                         <Card key={restarant.cloudinaryId} restData = {restarant}/>
                     ))
