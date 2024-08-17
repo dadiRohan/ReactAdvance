@@ -6,6 +6,9 @@ import Shimmer from "./Shimmer";
 const Body = () => {
 
     const [restList,setList] = useState(0); 
+    const [filterrestList,setFilterrestList] = useState([]);
+
+    const [searchText,setSearchText] = useState("");
   
     const fetchData = async () => {
         try {
@@ -14,14 +17,12 @@ const Body = () => {
             const json = await data.json();
 
             setList(json?.data?.suggestions)
-            
+            setFilterrestList(json?.data?.suggestions)
         } catch (error) {
             // console.log(error)
-            const json = RestAdvanceList;
-            console.log('Data:');
-            console.log(json);
             
-            setList(json)
+            setList(RestAdvanceList)
+            setFilterrestList(RestAdvanceList)
         }    
     };
 
@@ -35,7 +36,7 @@ const Body = () => {
             fetchData();    
 
             console.log('SetTimeout Timer');
-        },3000);
+        },1000);
         return () => clearTimeout(timer);
 
     },[]);  
@@ -58,14 +59,28 @@ const Body = () => {
             }}>Top Rated Restaurants</button>
 
             <div className="search-box">
-                <input type="text" name="search" placeholder="Search here..."/>
+                <input type="text" name="search" placeholder="Search here..." value={searchText} 
+                    onChange={
+                    (e) => {
+                        setSearchText(e.target.value);
+                    }}
+                />
+                
+                <button onClick={
+                    () => {
+                        console.log('Search Clicked'+searchText);
+                        const filterSerachRestList = restList.filter((res) => res?.text.toLowerCase().includes(searchText.toLowerCase()));
+                        setList(filterSerachRestList);
+                        setFilterrestList(filterSerachRestList);
+                    }
+                }>Search</button>
             </div>
             
             <div className="card-container" style={{"display" : "flex"}}>
             
                 {
                     
-                    restList.map((restarant) => (
+                    filterrestList.map((restarant) => (
                         // console.log(restarant);
                         <Card key={restarant.cloudinaryId} restData = {restarant}/>
                     ))
