@@ -42,3 +42,8 @@
     height: 400px;
     background-color: rgba(66, 58, 66, 0.699);
 }
+
+.user-card{
+    border : 2px dotted tomato;
+    display: inline-block;
+}
