@@ -1,23 +1,14 @@
 import React, {useState,useEffect} from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
-
+import { useRestMenuData } from "../utils/useRestMenuData";
 export const RestMenu = () => {
-
-    const [restview,setRestview] = useState(null);
 
     const {id} = useParams();
 
+    const restview = useRestMenuData(id);
 
-    const fetchviewData = async () => {
-        const data = await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.2403305&lng=73.1305395&restaurantId="+id+"&catalog_qa=undefined&submitAction=ENTER");
-        const json = await data.json();
-        setRestview(json.data);
-    }
-
-    useEffect(()=>{
-        fetchviewData();
-    },[]);
+    // console.log('data '+restview);
 
     if(restview === null) return <Shimmer/>;
     
