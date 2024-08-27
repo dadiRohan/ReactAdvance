@@ -1,6 +1,6 @@
 # Basic to Advance React Learning
 
-#URL : https://splendorous-bunny-536637.netlify.app/ OR https://66cd78b45c0c170008ac3186--splendorous-bunny-536637.netlify.app/
+#URL : https://splendorous-bunny-536637.netlify.app/ OR https://66cdb1aa8889ce0008542a1b--splendorous-bunny-536637.netlify.app/
 
 # Important Commands :
 (1) npm init
@@ -55,4 +55,15 @@ At React for doing operations and callback apis used hook these are inbuild reac
   setUserData(data?.list)
  }
 ,[])`
-   
+
+(3) useParams() : This hook can be used when at browser route id or slug as parameter passing and has to fetch inside component then this hook should be used.
+
+# CSS Properties :
+At React should used different types of css stylings which are Scss, Sass, Style Component, Tailwind, Material UI, Chakra UI etc.
+- Commands to install Tailwind :
+  
+  (I) npm install -D tailwindcs postcss
+  
+  (II) npx tailwindcss init
+  
+- For VS Code Extension : Tailwind CSS IntelliSense  
