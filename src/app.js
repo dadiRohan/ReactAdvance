@@ -1,10 +1,10 @@
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import {NormalState,UseStateVar,NormalEffect,Dashed} from './components/Hook';
 import { createBrowserRouter , RouterProvider, Outlet } from "react-router-dom";
-import  About  from "./components/About";
+// import  About  from "./components/About";
 import { Contact } from "./components/Contact";
 import { Error } from "./components/Error";
 import { RestMenu } from "./components/RestMenu";
@@ -19,6 +19,16 @@ const Reactcomponent = () => (
     </div>
 );
 
+const About = lazy(()=>import("./components/About"));
+
+const AboutData = () => {
+    return (
+        <Suspense fallback={<p><i>Loading...</i></p>}>
+            <About/>
+        </Suspense>
+    );
+};
+
 const RouterList = createBrowserRouter([
     {
         "path" : "/",
@@ -30,7 +40,7 @@ const RouterList = createBrowserRouter([
             },
             {
                 "path" : "/about",
-                "element" : <About/>
+                "element" : <AboutData/>
             },
             {
                 "path" : "/contact",
