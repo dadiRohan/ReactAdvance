@@ -3,12 +3,9 @@ import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import { useRestMenuData } from "../utils/useRestMenuData";
 export const RestMenu = () => {
-
     const {id} = useParams();
 
     const restview = useRestMenuData(id);
-
-    // console.log('data '+restview);
 
     if(restview === null) return <Shimmer/>;
     

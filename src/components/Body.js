@@ -11,7 +11,6 @@ const Body = () => {
     const [filterSearch,setFilterSearch] = useState([]);
 
     const [searchText,setSearchText] = useState("");
-
     let useOnlineStatusVar = useOnlineStatus();
 
     const fetchData = async () => {
@@ -43,17 +42,10 @@ const Body = () => {
         return <Shimmer />
     }
 
-    console.log('Online : '+ useOnlineStatusVar);
     return (
         <div className="main-body">
             
-            <div>
-                Online Status :
-                {
-                    (useOnlineStatusVar === true) ? '🟢' : '🔴'
-                }
-            </div>   
-
+            <div>Online Status :{(useOnlineStatusVar === true) ? '🟢' : '🔴'}</div>
             <div className="search-box">
                 <input type="text" name="search" placeholder="Search here" value={searchText} onChange={
                     (e) => {
