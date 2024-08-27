@@ -1,49 +1,33 @@
-#heading{
-    color: blue;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.main-header{
-    display:flex;
-}
+@layer components {
+    .card {
+      background-color: theme('colors.white');
+      border-radius: theme('borderRadius.lg');
+      padding: theme('spacing.6');
+      box-shadow: theme('boxShadow.xl');
+    }
+    /* ... */
+    .inner-card{
+        background-color: aqua;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: justify;
+        border: 4px dotted rgba(66, 58, 66, 0.699);
 
+    }
 
-
-.menu > ul{
-    display:flex;
-}
-.menu > ul > li{
-    display:flex;
-    padding : 20px;
-}
-
-/* #container{
-    display:"flex";
-    flex-wrap: wrap;
-    position: relative;
-    box-sizing: border-box;
-    width: 50%;
-} */
-
-#dashed{
-    display:"flex";
-    flex-wrap: wrap;
-    background-color: aquamarine;
-    width: 100%;
-    word-wrap: break-word;
-}
-.card-container,.shimmer-container{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.card,.shimmer{
-    margin: 20px;
-    width: 200px;
-    height: 400px;
-    background-color: rgba(66, 58, 66, 0.699);
-}
-
-.user-card{
-    border : 2px dotted tomato;
-    display: inline-block;
-}
+    .shimmer-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .shimmer{
+        margin: 20px;
+        width: 200px;
+        height: 400px;
+        background-color: rgba(66, 58, 66, 0.699);
+    }  
+  }
