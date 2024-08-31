@@ -7,12 +7,22 @@
       background-color: theme('colors.white');
       border-radius: theme('borderRadius.lg');
       padding: theme('spacing.6');
+      margin: theme('spacing.2');
       box-shadow: theme('boxShadow.xl');
+    }
+
+    .card2 {
+        background-color: theme('colors.bubble-gum');
+        border-radius: theme('borderRadius.lg');
+        padding: theme('spacing.6');
+        margin: theme('spacing.2');
+        box-shadow: theme('boxShadow.xl');
     }
     /* ... */
     .inner-card{
         background-color: aqua;
         padding: 10px;
+        margin : 4px;
         box-sizing: border-box;
         text-align: justify;
         border: 4px dotted rgba(66, 58, 66, 0.699);
