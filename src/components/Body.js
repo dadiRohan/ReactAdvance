@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import Card from "./Card";
+import Card,{withPromtedLabel} from "./Card";
 import {restList as restListJS,RestAdvanceList } from "../utils/mockdata";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -12,6 +12,8 @@ const Body = () => {
 
     const [searchText,setSearchText] = useState("");
     let useOnlineStatusVar = useOnlineStatus();
+
+    const RestaurantCardPromoted = withPromtedLabel(Card);
 
     const fetchData = async () => {
         try {
@@ -80,7 +82,15 @@ const Body = () => {
                     filterSearch.map((restarant) => (
                         
                         <Link to={"/restaurant/"+JSON.parse(restarant.metadata)?.data?.primaryRestaurantId} >
-                            <Card key={JSON.parse(restarant.metadata)?.data?.primaryRestaurantId} restData = {restarant}/>
+                            {
+                                JSON.parse(restarant.metadata)?.data?.enabled_flag === "1" 
+                                ? 
+                                (<RestaurantCardPromoted key={JSON.parse(restarant.metadata)?.data?.primaryRestaurantId} restData = {restarant}/>) //Higher Order Component
+                                :
+                                (<Card key={JSON.parse(restarant.metadata)?.data?.primaryRestaurantId} restData = {restarant}/>)
+
+                            }
+                            
                         </Link>
                     ))
             
