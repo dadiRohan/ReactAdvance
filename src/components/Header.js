@@ -1,11 +1,15 @@
-import React, {useState} from "react";
+import React, {useState,useContext} from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
     
     const [btnName,setBtnName] = useState("Login");
+   
+    const {loggedInUser} = useContext(UserContext);
 
+    console.log(loggedInUser);
 
     return (
 
