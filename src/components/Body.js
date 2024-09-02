@@ -82,11 +82,11 @@ const Body = () => {
                     filterSearch.map((restarant) => (
                         <Link to={"/restaurant/"+JSON.parse(restarant.metadata)?.data?.primaryRestaurantId} >
                             {
-                                JSON.parse(restarant.metadata)?.data?.enabled_flag === "1" 
+                                JSON.parse(restarant.metadata)?.data?.enabled_flag === 0 
                                 ? 
                                 (<RestaurantCardPromoted key={JSON.parse(restarant.metadata)?.data?.primaryRestaurantId} restData = {restarant} />) //Higher Order Component
                                 :
-                                (<Card key={JSON.parse(restarant.metadata)?.data?.primaryRestaurantId} restData = {restarant}/>)
+                                (<Card key={JSON.parse(restarant.metadata)?.data?.primaryRestaurantId} restData = {restarant} />)
 
                             }
                             

@@ -8,7 +8,7 @@ export const Contact = () => {
         const userList = await fetch('https://jsonplaceholder.typicode.com/users');
         const userJson = await userList.json();
         setUserData(userJson);
-        console.log(userJson);
+        // console.log(userJson);
     }
 
     useEffect(()=>{
@@ -28,8 +28,9 @@ export const Contact = () => {
 
             <div className="flex flex-wrap ">
             {
-                userData.map((data)=>(
-                    <div className="card2 ">
+                userData.map((data,index)=>(
+                        
+                    <div className="card2 " key={index}>
                         <p><b>Name : </b>{data?.name} </p>
                         <hr/>
                         <p><b>Email :</b> {data?.email} </p>
