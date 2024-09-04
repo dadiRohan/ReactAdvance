@@ -1,4 +1,4 @@
-import React,{lazy,Suspense} from "react";
+import React,{lazy,Suspense,useState, useEffect} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -8,17 +8,9 @@ import { createBrowserRouter , RouterProvider, Outlet } from "react-router-dom";
 import { Contact } from "./components/Contact";
 import { Error } from "./components/Error";
 import { RestMenu } from "./components/RestMenu";
+import UserContext from "./utils/UserContext";
+
 // React Component Composition //
-const Reactcomponent = () => (
-    <div id="container">
-        <Header/>
-
-        <Outlet/> 
-        
-        <Dashed/>
-    </div>
-);
-
 const About = lazy(()=>import("./components/About"));
 
 const AboutData = () => {
@@ -29,10 +21,33 @@ const AboutData = () => {
     );
 };
 
+const AppLayout = () => {
+    const [userName,setUserName] = useState(null);
+
+    //Authentication
+    useEffect(()=>{
+        //Call API and get data
+        const data = {
+            name : 'Rohan-Sable'
+        };
+        setUserName(data.name);
+    },[])
+
+    return (
+        <UserContext.Provider value={{loggedInUser : userName, setUserName}}>
+            <Header/>
+            <Outlet/>
+            <Dashed/>
+        </UserContext.Provider>
+    )
+
+}
+
+
 const RouterList = createBrowserRouter([
     {
         "path" : "/",
-        "element" : <Reactcomponent/>,
+        "element" : <AppLayout/>,
         children: [
             {
                 "path" : "/",
