@@ -1,9 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState,useContext} from "react";
 import Card,{withPromtedLabel} from "./Card";
 import {restList as restListJS,RestAdvanceList } from "../utils/mockdata";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import {useOnlineStatus}  from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
 
@@ -11,6 +12,7 @@ const Body = () => {
     const [filterSearch,setFilterSearch] = useState([]);
 
     const [searchText,setSearchText] = useState("");
+    const {loggedInUser,setUserName} = useContext(UserContext);
     let useOnlineStatusVar = useOnlineStatus();
 
     const RestaurantCardPromoted = withPromtedLabel(Card);
@@ -72,6 +74,15 @@ const Body = () => {
                     setSearchText("");
                     fetchData();   
                 }}>Clear</button>
+                
+                <input type="text" 
+                    placeholder="Enter Name"
+                    className="p-2 border-l-purple"
+                    value={loggedInUser}
+                    onChange={(e)=>{
+                        setUserName(e.target.value);
+                    }}
+                />
             </div>
             
 

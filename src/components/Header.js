@@ -8,9 +8,7 @@ const Header = () => {
     const [btnName,setBtnName] = useState("Login");
    
     const {loggedInUser} = useContext(UserContext);
-
-    console.log(loggedInUser);
-
+    
     return (
 
         <div className="flex justify-between">
@@ -22,12 +20,12 @@ const Header = () => {
                     <li className="m-2 p-2"><Link to="/">Home</Link></li>
                     <li className="m-2 p-2"><Link to="/about">About</Link></li>
                     <li className="m-2 p-2"><Link to="/contact">Contact</Link></li>
-                    <button className="m-2 p-2 text-purple rounded-full bg-gradient-to-r from-teal-400 to-blue-500 hover:from-pink-500 hover:to-orange-500" 
+                    <button className="m-2 p-2 text-white rounded-full bg-bubble-gum from-metal to-purple hover:from-tahiti hover:to-metal" 
                     onClick={
                         () => {
                             btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
                         }
-                    }>{btnName}</button>
+                    }>{loggedInUser} {btnName}</button>
                 </ul>
             </div>
         </div>
