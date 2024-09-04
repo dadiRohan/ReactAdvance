@@ -58,6 +58,8 @@ At React for doing operations and callback apis used hook these are inbuild reac
 
 (3) useParams() : This hook can be used when at browser route id or slug as parameter passing and has to fetch inside component then this hook should be used.
 
+(4) useContext() : This hook can be used for manage used data or details for example UserName or Active Status and can be accessed that data everywhere in applications. We can also pass UserName when we get from Authentication API and pass through this hook. Its advantage is one we declare any context we should call it functional based component as well as class based components (its syntax for calling is different).
+
 # CSS Properties :
 At React should used different types of css stylings which are Scss, Sass, Style Component, Tailwind, Material UI, Chakra UI etc.
 - Commands to install Tailwind :
