@@ -6,7 +6,7 @@ class UserClass extends React.Component {
         super(props);
 
         this.state = {
-            count : 0,
+            count : 157,
             userInfo : {
                 name : "",
                 location : "",
@@ -36,15 +36,19 @@ class UserClass extends React.Component {
 
         return (
             <div className="user-card">
-                <button onClick={()=>{
+                <h2 className="text-justify"> <span className=" font-semibold">User Name :</span>  {name} </h2>
+                <h3 className="text-justify"> <span className=" font-semibold">Location :</span> {location} </h3>
+                <h3 className="text-justify"> <span className=" font-semibold">Contact :</span> {html_url} </h3>
+
+                <div className="text-center">
+                <button className="m-1 p-1 text-white bg-purple text-center"
+                onClick={()=>{
                     this.setState({
                         count : this.state.count + 1,
                     });
                 }}>Like {count}</button>
+                </div>
 
-                <h2>Name : {name} </h2>
-                <h3>Location : {location}</h3>
-                <h3>Contact : {html_url}</h3>
             </div>
         ) 
     }    

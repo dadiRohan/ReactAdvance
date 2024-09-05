@@ -20,10 +20,10 @@ class About extends Component{
         // console.log('parent render');
 
         return (
-            <div className="about-header">
-                <h1>About</h1>
+            <div className="about-header ring-metal ring-4 w-72">
+                <p className="text-center text-wrap text-4xl bg-metal text-white ">About</p>
                 <div>
-                    <b>Log-User:</b>
+                    <b>Log In: </b>
                     <UserContext.Consumer>
                         {({ loggedInUser }) => (
                             <i>{loggedInUser}</i>
