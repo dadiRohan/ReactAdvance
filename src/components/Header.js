@@ -2,6 +2,7 @@ import React, {useState,useContext} from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
     
@@ -9,6 +10,9 @@ const Header = () => {
    
     const {loggedInUser} = useContext(UserContext);
     
+    //Subsribing to store using Selector
+    const cartItems = useSelector((store) => store.cart.items);
+
     return (
 
         <div className="flex justify-between">
@@ -26,6 +30,7 @@ const Header = () => {
                             btnName === "Login" ? setBtnName("Logout") : setBtnName("Login")
                         }
                     }>{loggedInUser} {btnName}</button>
+                    <li> Cart - {cartItems.length} </li>
                 </ul>
             </div>
         </div>
