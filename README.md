@@ -1,6 +1,6 @@
 # Basic to Advance React Learning
 
-#URL : https://splendorous-bunny-536637.netlify.app/ OR https://66d9834d7d8e1b000826e2f2--splendorous-bunny-536637.netlify.app/
+#URL : https://splendorous-bunny-536637.netlify.app/ OR https://66dafdb2690acb0008d7dd8d--splendorous-bunny-536637.netlify.app/
 
 # Important Commands :
 (1) npm init
@@ -69,3 +69,15 @@ At React should used different types of css stylings which are Scss, Sass, Style
   (II) npx tailwindcss init
   
 - For VS Code Extension : Tailwind CSS IntelliSense  
+
+# Redux : 
+Redux is Similar to React Library but its not compulsary to use redux. at large scale applications redux can be used for hold and process data in whole application just like useContext. To use redux has to setup in react application has to follow below given steps : 
+- Install @reduxjs/toolkit & react-redux
+- Connect our Store to our app
+- Slice (CartSlice)
+- dispatch (action)
+- Selector
+
+  
+
+
