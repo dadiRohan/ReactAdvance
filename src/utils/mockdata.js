@@ -152,3 +152,36 @@ export const RestAdvanceList = [
         "disabled": false
       }
 ];
+
+export const viewRestoData = [
+  { 
+    "id": 1,
+    "name" : "Abc",
+    "price" : 200,
+    "status" : "available"
+  },
+  { 
+    "id": 2,
+    "name" : "Pqr",
+    "price" : 100,
+    "status" : "available"
+  },
+  { 
+    "id": 3,
+    "name" : "STU",
+    "price" : 150,
+    "status" : "available"
+  },
+  { 
+    "id": 4,
+    "name" : "Def",
+    "price" : 50,
+    "status" : "available"
+  },
+  { 
+    "id": 5,
+    "name" : "Mnq",
+    "price" : 250,
+    "status" : "available"
+  },
+];
