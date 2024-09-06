@@ -9,6 +9,8 @@ import { Contact } from "./components/Contact";
 import { Error } from "./components/Error";
 import { RestMenu } from "./components/RestMenu";
 import UserContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
 
 // React Component Composition //
 const About = lazy(()=>import("./components/About"));
@@ -34,11 +36,13 @@ const AppLayout = () => {
     },[])
 
     return (
-        <UserContext.Provider value={{loggedInUser : userName, setUserName}}>
-            <Header/>
-            <Outlet/>
-            <Dashed/>
-        </UserContext.Provider>
+        <Provider store={appStore}>
+            <UserContext.Provider value={{loggedInUser : userName, setUserName}}>
+                <Header/>
+                <Outlet/>
+                <Dashed/>
+            </UserContext.Provider>
+        </Provider>
     )
 
 }
