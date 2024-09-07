@@ -1,5 +1,5 @@
 import React, {useState,useEffect} from "react";
-
+import Shimmer from "./Shimmer";
 export const Contact = () => {
 
     const [userData,setUserData] = useState([]);
@@ -43,6 +43,10 @@ export const Contact = () => {
     useEffect(()=>{
         fetchUsers();
     },[]);
+
+    if(userData.length === 0){
+        return <Shimmer />
+    }
 
     return (
         <div className="contact-header">

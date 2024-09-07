@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from "react";
 import Shimmer from "./Shimmer";
-import { useParams } from "react-router-dom";
+import { UNSAFE_useRouteId, useParams } from "react-router-dom";
 import { useRestMenuData } from "../utils/useRestMenuData";
 import { viewRestoData } from "../utils/mockdata";
 import MennuList from "./MennuList";
@@ -32,7 +32,7 @@ export const RestMenu = () => {
             <div className="flex flex-col px-8 py-6 max-w-sm mx-auto rounded-lg shadow-md overflow-y-auto">
                 {
                     menuData.map((data)=>(
-                        <MennuList data={data}/>
+                        <MennuList key={Math.random()} data={data}/>
                     ))
                 }
             </div>

@@ -19,7 +19,7 @@ const Body = () => {
 
     const fetchData = async () => {
         try {
-            const data = await fetch("https://www.swiggy.com/dapi/restaurants/search/suggest?lat=19.120842&lng=72.9250169&str=Thane");
+            const data = await fetch("https://www.swiggy.com/dapi/restaurants/search/suggest?lat=19.120842&lng=72.9250169&str=Mumbai");
             const json = await data.json();
             const masterJson = json?.data?.suggestions;
 
@@ -50,11 +50,11 @@ const Body = () => {
         <div className="main-body">
             
             <div className="search-box">
-                <span>Internet:{(useOnlineStatusVar === true) ? '🟢' : '🔴'}</span>
-                <b>Log In User :</b>
+                <span className="font-thin">Online Status:{(useOnlineStatusVar === true) ? '🟢' : '🔴'}</span>
+                <b>LogIn User :</b>
                 <input type="text" 
                     placeholder="Enter Name"
-                    className="m-2 p-2 text-white rounded-full bg-midnight"
+                    className="m-2 p-1 text-center text-white rounded-full bg-metal"
                     value={loggedInUser}
                     onChange={(e)=>{
                         setUserName(e.target.value);

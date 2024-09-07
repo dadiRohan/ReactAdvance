@@ -20,8 +20,8 @@ class About extends Component{
         // console.log('parent render');
 
         return (
-            <div className="about-header ring-metal ring-4 w-72">
-                <p className="text-center text-wrap text-4xl bg-metal text-white ">About</p>
+            <div className="ring-metal ring-2 w-72  ml-96 mt-8">
+                <p className="text-center text-wrap text-4xl bg-metal text-white">About</p>
                 <div>
                     <b>Log In: </b>
                     <UserContext.Consumer>

@@ -11,6 +11,7 @@ import { RestMenu } from "./components/RestMenu";
 import UserContext from "./utils/UserContext";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
+import Cart from "./components/Cart";
 
 // React Component Composition //
 const About = lazy(()=>import("./components/About"));
@@ -30,7 +31,7 @@ const AppLayout = () => {
     useEffect(()=>{
         //Call API and get data
         const data = {
-            name : 'Rohan-Sable'
+            name : 'R-S'
         };
         setUserName(data.name);
     },[])
@@ -68,6 +69,10 @@ const RouterList = createBrowserRouter([
             {
                 "path" : "/restaurant/:id",
                 "element" : <RestMenu/>
+            },
+            {
+                "path" : "/cart",
+                "element" : <Cart/>
             }
         ],
         "errorElement" : <Error/>

@@ -35,9 +35,9 @@
     }
     
     .shimmer{
-        margin: 20px;
-        width: 200px;
-        height: 400px;
-        background-color: rgba(66, 58, 66, 0.699);
+        margin: 10px;
+        width: 400px;
+        height: 200px;
+        background-color: #D3D3D3;
     }  
   }
