@@ -1,6 +1,6 @@
 # Basic to Advance React Learning
 
-#URL : https://splendorous-bunny-536637.netlify.app/ OR https://66dafdb2690acb0008d7dd8d--splendorous-bunny-536637.netlify.app/
+#URL : https://66dc79ef0ae2360008740cd7--splendorous-bunny-536637.netlify.app/
 
 # Important Commands :
 (1) npm init
