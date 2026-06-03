@@ -3,41 +3,260 @@
 @tailwind utilities;
 
 @layer components {
+    /* Zomato-style Restaurant Card */
     .card {
-      background-color: theme('colors.white');
-      border-radius: theme('borderRadius.lg');
-      padding: theme('spacing.6');
-      margin: theme('spacing.2');
-      box-shadow: theme('boxShadow.xl');
+        background-color: theme('colors.white');
+        border-radius: 1.5rem;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.25s ease-in-out;
+        overflow: hidden;
+        cursor: pointer;
     }
 
+    .card:hover {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Zomato Premium Card (Like Gold/Pro) */
     .card2 {
-        background-color: theme('colors.bubble-gum');
-        border-radius: theme('borderRadius.lg');
-        padding: theme('spacing.6');
-        margin: theme('spacing.2');
-        box-shadow: theme('boxShadow.xl');
-    }
-    /* ... */
-    .inner-card{
-        background-color: aqua;
-        padding: 10px;
-        margin : 4px;
-        box-sizing: border-box;
-        text-align: justify;
-        border: 4px dotted rgba(66, 58, 66, 0.699);
-
+        background: linear-gradient(135deg, #FF7E5F 0%, #FEB47B 100%);
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        margin: 0.5rem;
+        box-shadow: 0 4px 20px rgba(255, 126, 95, 0.25);
+        transition: all 0.3s ease;
+        color: white;
+        position: relative;
+        overflow: hidden;
     }
 
-    .shimmer-container{
+    .card2::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        transform: rotate(45deg);
+    }
+
+    .card2:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 28px rgba(255, 126, 95, 0.35);
+    }
+
+    /* Zomato-style Inner Card (Menu Item Style) */
+    .inner-card {
+        background: white;
+        padding: 1rem;
+        margin: 0.5rem 0;
+        border-radius: 1rem;
+        text-align: left;
+        border: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s ease;
         display: flex;
-        flex-wrap: wrap;
+        align-items: center;
+        gap: 1rem;
+        cursor: pointer;
+    }
+
+    .inner-card:hover {
+        background: #FFF7F0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transform: translateX(4px);
+    }
+
+    /* Zomato Shimmer Loading Effect */
+    .shimmer-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
     }
     
-    .shimmer{
-        margin: 10px;
-        width: 400px;
-        height: 200px;
-        background-color: #D3D3D3;
-    }  
-  }
+    .shimmer {
+        margin: 0;
+        width: 100%;
+        height: 280px;
+        background: #f0f0f0;
+        border-radius: 1.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .shimmer::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.4) 50%,
+            rgba(255, 255, 255, 0) 100%
+        );
+        animation: shimmer 1.5s infinite;
+    }
+
+    @keyframes shimmer {
+        100% {
+            transform: translateX(100%);
+        }
+    }
+
+    /* Zomato-style Rating Badge */
+    .rating-badge {
+        background-color: #1C1C1C;
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    /* Zomato-style Price Tag */
+    .price-tag {
+        color: #EF4F5F;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    /* Zomato-style Offer Pill */
+    .offer-pill {
+        background: #EF4F5F;
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.5rem;
+        font-size: 0.7rem;
+        font-weight: 600;
+        display: inline-block;
+    }
+
+    /* Zomato-style Section Header */
+    .section-header {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #1C1C1C;
+        margin-bottom: 1rem;
+        letter-spacing: -0.3px;
+    }
+
+    /* Zomato-style Food Card */
+    .food-card {
+        background: white;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        transition: all 0.25s ease;
+    }
+
+    .food-card:hover {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Zomato-style Quick View Button */
+    .quick-view-btn {
+        background: white;
+        color: #EF4F5F;
+        border: 1px solid #EF4F5F;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+        cursor: pointer;
+    }
+
+    .quick-view-btn:hover {
+        background: #EF4F5F;
+        color: white;
+        transform: scale(1.02);
+    }
+
+    /* Zomato-style Filter Chip */
+    .filter-chip {
+        background: #F8F8F8;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        font-size: 0.875rem;
+        color: #4A4A4A;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border: 1px solid transparent;
+    }
+
+    .filter-chip:hover {
+        background: #EF4F5F;
+        color: white;
+    }
+
+    .filter-chip.active {
+        background: #EF4F5F;
+        color: white;
+        border-color: #EF4F5F;
+    }
+
+    /* Zomato-style Distance Badge */
+    .distance-badge {
+        background: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(4px);
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.5rem;
+        font-size: 0.7rem;
+        font-weight: 500;
+    }
+
+    /* Zomato-style Add Button */
+    .add-btn {
+        background: #EF4F5F;
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 2rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.2s ease;
+        border: none;
+        cursor: pointer;
+    }
+
+    .add-btn:hover {
+        background: #E03545;
+        transform: scale(1.02);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .shimmer-container {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .shimmer {
+            height: 240px;
+        }
+        
+        .card, .card2 {
+            border-radius: 1rem;
+        }
+        
+        .section-header {
+            font-size: 1.25rem;
+        }
+        
+        .inner-card {
+            padding: 0.75rem;
+        }
+    }
+}
