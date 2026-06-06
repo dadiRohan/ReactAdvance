@@ -73,7 +73,7 @@ export const restList = [
 
 export const RestAdvanceList = [
   {
-    "text": "INDO CHINESE THANE",
+    "text": "INDO CHINESE",
     "highlightedText": "INDO CHINESE {{THANE}}",
     "type": "RESTAURANT",
     "suggestionType": "SUGGESTION_TYPE_LOW_CONFIDENCE",
@@ -86,7 +86,7 @@ export const RestAdvanceList = [
     "cloudinaryId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/6/29/22d6f80a-6769-4a4d-9526-54b893aa909f_667248 SS.jpg",
     "metadata": "{\"type\":\"RESTAURANT\",\"data\":{\"parentId\":524220,\"primaryRestaurantId\":667248,\"cloudinaryId\":\"RX_THUMBNAIL/IMAGES/VENDOR/2024/6/29/22d6f80a-6769-4a4d-9526-54b893aa909f_667248 SS.jpg\",\"brandId\":524220,\"dishFamilyId\":\"846613\",\"enabled_flag\":1},\"businessCategory\":\"SWIGGY_FOOD\",\"displayLabel\":\"Restaurant\"}",
     "cta": {
-      "text": "INDO CHINESE THANE",
+      "text": "INDO CHINESE",
       "type": "DEEPLINK",
       "link": "swiggy://explore?query=INDO%20CHINESE%20THANE&metadata=%7B%22type%22%3A%22RESTAURANT%22%2C%22data%22%3A%7B%22parentId%22%3A524220%2C%22primaryRestaurantId%22%3A667248%2C%22cloudinaryId%22%3A%22RX_THUMBNAIL%2FIMAGES%2FVENDOR%2F2024%2F6%2F29%2F22d6f80a-6769-4a4d-9526-54b893aa909f_667248%20SS.jpg%22%2C%22brandId%22%3A524220%2C%22dishFamilyId%22%3A%22846613%22%2C%22enabled_flag%22%3A1%7D%2C%22businessCategory%22%3A%22SWIGGY_FOOD%22%2C%22displayLabel%22%3A%22Restaurant%22%7D&marketplace=%7B%22marketplaceId%22%3A%22SWIGGY%22%2C%22businessLineId%22%3A%22FOOD%22%7D"
     },
@@ -95,6 +95,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/500p/37/31/vibrant-of-fresh-asian-spring-rolls-with-dip-vector-58593731.avif',
     "disabled": false
   },
   {
@@ -120,6 +121,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/21/79/hot-chili-pepper-vector-20982179.avif',
     "disabled": false
   },
   {
@@ -145,6 +147,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/04/26/chinese-restaurant-furniture-and-interior-design-vector-23870426.avif',
     "disabled": false
   },
   {
@@ -170,6 +173,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/500p/70/44/cozy-coffee-shop-interior-vector-28997044.webp',
     "disabled": false
   },
   {
@@ -195,6 +199,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/23/35/delicious-pasta-dish-vector-5172335.avif',
     "disabled": false
   },
   {
@@ -220,6 +225,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/26/27/delicious-creamy-pasta-with-fresh-tomatoes-vector-53102627.avif',
     "disabled": false
   },
   {
@@ -245,6 +251,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/93/36/food-service-tray-icon-vector-5979336.webp',
     "disabled": false
   },
   {
@@ -270,6 +277,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/500p/15/70/asian-food-platter-top-view-vector-58591570.avif',
     "disabled": false
   },
   {
@@ -295,6 +303,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/36/36/english-breakfast-with-egg-and-sausages-tomatoes-vector-47863636.avif',
     "disabled": false
   },
   {
@@ -320,6 +329,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/85/10/pepperoni-pizza-vector-3268510.avif',
     "disabled": false
   },
   {
@@ -345,6 +355,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/16/77/mexican-taco-ingredients-vector-14191677.avif',
     "disabled": false
   },
   {
@@ -370,6 +381,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/09/61/asian-food-circle-diverse-cuisine-vector-50680961.avif',
     "disabled": false
   },
   {
@@ -395,6 +407,7 @@ export const RestAdvanceList = [
     "subCategory": "Restaurant",
     "subCategoryColor": "#686B78",
     "restaurantId": 0,
+    "Image" : 'https://cdn.vectorstock.com/i/750p/58/22/tuscan-seasoned-sausage-barbecue-grilling-vector-57325822.avif',
     "disabled": false
   }
 ];
