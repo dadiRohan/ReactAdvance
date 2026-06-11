@@ -1,2 +1,2 @@
-export const LOGO_URL = "https://cdn.dribbble.com/users/7004524/screenshots/15197928/media/40944f27c2dcfaf14038f387b4e88c2d.jpg?resize=768x576&vertical=center";
+export const LOGO_URL = "https://cdn.dribbble.com/userupload/46035326/file/d6585c272ba9c82b4078b16ff84503c8.png??resize=768x576&vertical=center";
 
