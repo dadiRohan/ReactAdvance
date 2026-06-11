@@ -6,7 +6,7 @@ class UserClass extends React.Component {
         super(props);
 
         this.state = {
-            count : 157,
+            count : 1057,
             userInfo : {
                 name : "",
                 location : "",

@@ -51,7 +51,7 @@ const Body = () => {
             // Fallback to mock data
             setList(RestAdvanceList);
             setFilterSearch(RestAdvanceList);
-            setError("Using demo data. Unable to connect to Swiggy API.");
+            setError("No records found.");
         } finally {
             setLoading(false);
         }
