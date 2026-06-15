@@ -18,7 +18,7 @@ const Header = () => {
 
         <div className="flex justify-between bg-silver">
             <div className="logo">
-                <img style={{"width" : "15%"}} src={LOGO_URL} />
+                <img style={{"width" : "45%"}} src={LOGO_URL} />
             </div>
             <div className="menu">
                 <ul className="flex p-2 m-2">
